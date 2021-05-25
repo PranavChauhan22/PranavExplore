@@ -1,0 +1,62 @@
+.bdy{
+    background-image: url("/static/staffdash.jpg");
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 30vh;
+    left: 40vw;
+
+}
+.pName{
+    background-color: transparent;
+    border: 2px solid linear-gradient(rgba(0, 0, 0, 0),wheat);
+    border-radius: 11px;
+    padding: 10px;
+    margin:10px;
+}
+.pName:hover{
+    background-color: transparent;
+    border: 2px solid linear-gradient(rgba(0, 0, 0, 0),wheat);
+    border-radius: 11px;
+    padding: 10px;
+    margin:10px;
+    width: 300px;
+
+}
+.pAge{
+    background-color: transparent;
+    border: 2px solid linear-gradient(rgba(0, 0, 0, 0),wheat);
+    border-radius: 11px;
+    padding: 10px;
+    margin:10px;
+}
+.problem{
+    background-color: transparent;
+    border: 2px solid linear-gradient(rgba(0, 0, 0, 0),wheat);
+    border-radius: 11px;
+    padding: 10px;
+    margin:10px;
+}
+.submit{
+    background-color: transparent;
+    border: 2px solid linear-gradient(white,wheat);
+    border-radius: 10px;
+}
+.icon{
+    background-image: url("./staffgrid2.svg");
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}

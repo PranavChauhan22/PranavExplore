@@ -1,0 +1,177 @@
+ul
+    each doctor in doctors
+        li #{doctor.pname} #{doctor.page} #{doctor.prescription}
+    doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel="stylesheet", href="/static/staffgrid.css")
+  title Document
+.bgImage
+section.timeline
+  ul
+    li
+      div
+        time 1687
+        .discovery
+          h1(class="h1a") Discovery
+          p(class="h1b")
+            | Laws of motion
+        .scientist
+          span(class="h1c") Newton
+    li
+      div
+        time 1785
+        .discovery
+          h1(class="h2a") Discovery
+          p(class="h2b")
+            | Laws of motion
+        .scientist
+          span(class="h2c") Newton
+    li
+      div
+        time 1827
+        .discovery
+          h1(class="h3a") Discovery
+          p(class="h3b")
+            | Laws of motion
+        .scientist
+          span(class="h3c") Newton
+    li
+      div
+        time 1831
+        .discovery
+          h1(class="h4a") Discovery
+          p(class="h4b")
+            | Laws of motion
+        .scientist
+          span(class="h4c") Newton
+    li
+      div
+        time 1867
+        .discovery
+          h1(class="h5a") Discovery
+          p(class="h5b")
+            | Laws of motion
+        .scientist
+          span(class="h5c") Newton
+    li
+      div
+        time 1895
+        .discovery
+          h1(class="h6a") Discovery
+          p(class="h6b")
+            | Laws of motion
+        .scientist
+          span(class="h6c") Newton
+    li
+      div
+        time 1942
+        .discovery
+          h1(class="h1a") No patient
+          p(class="h1b")
+            | x
+        .scientist
+          span(class="h1c") No more cases
+script.
+  var items = document.querySelectorAll(".timeline li");
+  function isElementInViewport(el) {
+  var rect = el.getBoundingClientRect();
+  return (
+  rect.top >= 0 &&
+  rect.left >= 0 &&
+  rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+  rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+  }
+  function callbackFunc() {
+  for (var i = 0; i < items.length; i++) {
+  if (isElementInViewport(items[i])) {
+  if(!items[i].classList.contains("in-view")){
+  items[i].classList.add("in-view");
+  }
+  } else if(items[i].classList.contains("in-view")) {
+  items[i].classList.remove("in-view");
+  }
+  }
+  }
+  window.addEventListener("load", callbackFunc);
+  window.addEventListener("scroll", callbackFunc);
+  var h1a=document.querySelector(".h1a")
+  var h1b=document.querySelector(".h1b")
+  var h1c=document.querySelector(".h1c")
+  var h2a=document.querySelector(".h2a")
+  var h2b=document.querySelector(".h2b")
+  var h2c=document.querySelector(".h2c")
+  var h3a=document.querySelector(".h3a")
+  var h3b=document.querySelector(".h3b")
+  var h3c=document.querySelector(".h3c")
+  var h4a=document.querySelector(".h4a")
+  var h4b=document.querySelector(".h4b")
+  var h4c=document.querySelector(".h4c")
+  var h5a=document.querySelector(".h5a")
+  var h5b=document.querySelector(".h5b")
+  var h5c=document.querySelector(".h5c")
+  var h6a=document.querySelector(".h6a")
+  var h6b=document.querySelector(".h6b")
+  var h6c=document.querySelector(".h6c")
+  var text1=document.createTextNode(document.querySelector("ul").childNodes[0].innerText.split(" ")[0]);
+  h1a.innerHTML=" ";
+  h1a.appendChild(text1);
+  var text2=document.createTextNode(document.querySelector("ul").childNodes[0].innerText.split(" ")[1]);
+  h1b.innerHTML=" ";
+  h1b.appendChild(text2);
+  var text3=document.createTextNode(document.querySelector("ul").childNodes[0].innerText.split(`${document.querySelector("ul").childNodes[0].innerText.split(" ")[1]}`)[1]);
+  h1c.innerHTML=" ";
+  h1c.appendChild(text3);
+
+  var text1=document.createTextNode(document.querySelector("ul").childNodes[1].innerText.split(" ")[0]);
+  h2a.innerHTML=" ";
+  h2a.appendChild(text1);
+  var text2=document.createTextNode(document.querySelector("ul").childNodes[1].innerText.split(" ")[1]);
+  h2b.innerHTML=" ";
+  h2b.appendChild(text2);
+  var text3=document.createTextNode(document.querySelector("ul").childNodes[1].innerText.split(`${document.querySelector("ul").childNodes[1].innerText.split(" ")[1]}`)[1]);
+  h2c.innerHTML=" ";
+  h2c.appendChild(text3);
+
+  var text1=document.createTextNode(document.querySelector("ul").childNodes[2].innerText.split(" ")[0]);
+  h3a.innerHTML=" ";
+  h3a.appendChild(text1);
+  var text2=document.createTextNode(document.querySelector("ul").childNodes[2].innerText.split(" ")[1]);
+  h3b.innerHTML=" ";
+  h3b.appendChild(text2);
+  var text3=document.createTextNode(document.querySelector("ul").childNodes[2].innerText.split(`${document.querySelector("ul").childNodes[2].innerText.split(" ")[1]}`)[1]);
+  h3c.innerHTML=" ";
+  h3c.appendChild(text3)
+
+  var text1=document.createTextNode(document.querySelector("ul").childNodes[3].innerText.split(" ")[0]);
+  h4a.innerHTML=" ";
+  h4a.appendChild(text1);
+  var text2=document.createTextNode(document.querySelector("ul").childNodes[3].innerText.split(" ")[1]);
+  h4b.innerHTML=" ";
+  h4b.appendChild(text2);
+  var text3=document.createTextNode(document.querySelector("ul").childNodes[3].innerText.split(`${document.querySelector("ul").childNodes[3].innerText.split(" ")[1]}`)[1]);
+  h4c.innerHTML=" ";
+  h4c.appendChild(text3);
+
+  var text1=document.createTextNode(document.querySelector("ul").childNodes[4].innerText.split(" ")[0]);
+  h5a.innerHTML=" ";
+  h5a.appendChild(text1);
+  var text2=document.createTextNode(document.querySelector("ul").childNodes[4].innerText.split(" ")[1]);
+  h5b.innerHTML=" ";
+  h5b.appendChild(text2);
+  var text3=document.createTextNode(document.querySelector("ul").childNodes[4].innerText.split(`${document.querySelector("ul").childNodes[4].innerText.split(" ")[1]}`)[1]);
+  h5c.innerHTML=" ";
+  h5c.appendChild(text3);
+
+  var text1=document.createTextNode(document.querySelector("ul").childNodes[5].innerText.split(" ")[0]);
+  h6a.innerHTML=" ";
+  h6a.appendChild(text1);
+  var text2=document.createTextNode(document.querySelector("ul").childNodes[5].innerText.split(" ")[1]);
+  h6b.innerHTML=" ";
+  h6b.appendChild(text2);
+  var text3=document.createTextNode(document.querySelector("ul").childNodes[5].innerText.split(`${document.querySelector("ul").childNodes[5].innerText.split(" ")[1]}`)[1]);
+  h6c.innerHTML=" ";
+  h6c.appendChild(text3);

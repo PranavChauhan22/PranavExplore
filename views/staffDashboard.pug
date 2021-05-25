@@ -1,0 +1,22 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel="stylesheet", href="/static/staffdashboard.css")
+    title Document
+  .bdy
+  a.icon(href="/staffgrid")
+  body
+    form(action='/staffdata' ,method='post')
+  
+      | Patient Name:
+      input(type='text' name='pName' class="pName" placeholder="Patient Name")
+
+      | Patient Age:
+      input(type='text' name='pAge' class="pAge" placeholder="Patient Age")
+
+      | problem:
+      textarea(name='problem' cols='30' rows='10' placeholder='problem...' class="problem")
+      input(type="submit" name="submit" class="submit")

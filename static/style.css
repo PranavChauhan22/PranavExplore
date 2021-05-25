@@ -1,0 +1,112 @@
+@import url("Oct12.css");
+.anime1{
+    background-color: rgb(250, 151, 201);
+    /* opacity: 0.5; */
+    height: 100vh;
+
+}
+ .form1{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+    padding: 10%;
+    
+    
+ }
+ .email{
+     margin: 33px;
+     color: rgb(0, 0, 0);
+     z-index: 1;
+ }
+ .name{
+     margin: 33px;
+   /* color: #FF6600; */
+   z-index: 1;
+   color: rgb(0, 0, 0);
+ }
+
+ .btn{
+     margin: 33px;
+     z-index: 1;
+     
+     
+ }
+ 
+.category{
+    margin: 33px;
+    color: rgb(0, 0, 0);
+    z-index: 1;
+}
+ input[type="Name"]{
+ /* background-color: rgb(245, 136, 59); */
+ 
+ transition-property: all;
+ transition-duration: 1s;
+ transition-timing-function: ease-in-out;
+ height: 20px;
+ width: 170px;
+ background-color: transparent;
+ border: 3px solid #00FFFF;
+ border-radius: 10px;
+
+ 
+}
+input[type="Name"]:hover{
+ height: 40px;
+ width: 300px;
+ /* background-color: rgb(209, 179, 124); */
+ font-weight: bold;
+ /* font-color: brown; */
+ border: 3px solid #CC00FF;
+
+
+}
+input[type="email"]{
+ /* background-color: rgb(245, 136, 59); */
+ color: whitesmoke;
+ transition-property: all;
+ transition-duration: 1s;
+ transition-timing-function: ease-in-out;
+ height: 20px;
+ width: 170px;
+ border: 3px solid #00FFFF;
+ background-color: transparent;
+ border-radius: 10px;
+ z-index: 1;
+ 
+}
+input[type="email"]:hover{
+ height: 40px;
+ width: 300px;
+ /* background-color: rgb(209, 179, 124); */
+ font-weight: bold;
+ /* font-color: brown; */
+ border: 3px solid #CC00FF;
+
+
+
+}
+input[type="button"]{
+ /* background-color: rgb(245, 136, 59); */
+ color: whitesmoke;
+ transition-property: all;
+ transition-duration: 1s;
+ transition-timing-function: ease-in-out;
+ height: 30px;
+ width: 50px;
+ border: 3px solid #00FFFF;
+ background-color: black;
+ border-radius: 10px;
+ z-index: 1;
+}
+input[type="button"]:hover{
+ height: 40px;
+ width: 300px;
+ /* background-color: rgb(209, 179, 124); */
+ font-weight: bold;
+ /* font-color: brown; */
+ border: 3px solid #CC00FF;
+
+
+}

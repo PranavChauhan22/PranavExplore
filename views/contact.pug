@@ -1,0 +1,52 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Contact Us
+link(rel='stylesheet' href='/static/style.css')
+
+
+
+
+
+.anime1
+  .scene
+    .upper
+      .moon
+        .crater1
+        .crater2
+      .star1
+      .star2
+      .star3
+      .cloud1
+        .circle
+        .filler
+      .cloud2
+        .circle
+        .filler
+      .tail
+        .left
+        .right
+        .body
+      .drop
+    .lower
+      .whale
+        .eye
+        .detail1
+          .detail2
+      .fin
+  .container
+    form.form1(action='/contact',method='post')
+      .name
+        | Name: 
+        input(type='Name' placeholder='Your Name' name='name' class="name")
+      .email
+        | Id:  
+        input(type='email' placeholder='Your Id' name='email' class="email")
+      .category 
+        | Category:
+        input(type='Name' placeholder='Your Identification' name='category' class="category")
+ 
+      .btn
+        input(type="submit")

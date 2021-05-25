@@ -1,0 +1,121 @@
+@import "compass/css3";
+ * {
+	 box-sizing: border-box;
+}
+ html, body {
+	 background-color: #fedcc8;
+}
+ .parallax {
+	 perspective: 100px;
+	 height: 100vh;
+	 overflow-x: hidden;
+	 overflow-y: auto;
+	 position: absolute;
+	 top: 0;
+	 left: 50%;
+	 right: 0;
+	 bottom: 0;
+	 margin-left: -1500px;
+}
+ .parallax__layer {
+	 position: absolute;
+	 top: 0;
+	 right: 0;
+	 bottom: 0;
+	 left: 0;
+}
+ .parallax__layer img {
+	 display: block;
+	 position: absolute;
+	 bottom: 0;
+}
+ .parallax__cover {
+	 background: #2d112b;
+	 display: block;
+	 position: absolute;
+	 top: 100%;
+	 left: 0;
+	 right: 0;
+	 height: 2000px;
+	 z-index: 2;
+}
+ .parallax__layer__0 {
+	 transform: translateZ(-300px) scale(4);
+}
+ .parallax__layer__1 {
+	 transform: translateZ(-250px) scale(3.5);
+}
+ .parallax__layer__2 {
+	 transform: translateZ(-200px) scale(3);
+}
+ .parallax__layer__3 {
+	 transform: translateZ(-150px) scale(2.5);
+}
+ .parallax__layer__4 {
+	 transform: translateZ(-100px) scale(2);
+}
+ .parallax__layer__5 {
+	 transform: translateZ(-50px) scale(1.5);
+}
+ .parallax__layer__6 {
+	 transform: translateZ(0px) scale(1);
+}
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+body {
+	background-color: #111;
+}
+
+.title {
+	font-family: "Montserrat";
+	text-align: center;
+	color: #FFF;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	/* letter-spacing: 1px; */
+    left: 59vw;
+    position: absolute;
+    z-index: -1;
+}
+
+h1 {
+	background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+	background-size: cover;
+	color: transparent;
+	-moz-background-clip: text;
+	-webkit-background-clip: text;
+	text-transform: uppercase;
+	font-size: 120px;
+	line-height: .75;
+	margin: 10px 0;
+}
+/* styling my button */
+
+.white-mode {
+	text-decoration: none;
+	padding: 7px 10px;
+	background-color: #122;
+	border-radius: 3px;
+	color: #FFF;
+	transition: .35s ease-in-out;
+	position: absolute;
+	left: 15px;
+	bottom: 15px;
+	font-family: "Montserrat";
+}
+
+.white-mode:hover {
+	background-color: #FFF;
+	color: #122;
+}
+.menu{
+	background-image: url("./dashLogo.png");
+	position: fixed;
+	width: 60px;
+	height: 60px;
+	background-size: cover;
+	bottom: 5vh;
+	left: 3vw;
+}

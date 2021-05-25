@@ -1,0 +1,269 @@
+html
+  body
+    script(src='https://www.amcharts.com/lib/3/amcharts.js?x')
+    script(src='https://www.amcharts.com/lib/3/serial.js?x')
+    script(src='https://www.amcharts.com/lib/3/themes/dark.js')
+    link(rel="stylesheet", href="/static/graph.css")
+    #chartdiv
+    script.
+      var chartData = [
+      {
+      "date": "2012-01-01",
+      "patients": 227,
+      "Disease": "Alzheimer’s Disease",
+      "Disease2": "Alzheimer’s Disease",
+      "townSize": 25,
+      "latitude": 40.71,
+      "duration": 408
+      },
+      {
+      "date": "2012-01-02",
+      "patients": 371,
+      "Disease": "Covid-19",
+      "townSize": 14,
+      "latitude": 38.89,
+      "duration": 482
+      },
+      {
+      "date": "2012-01-03",
+      "patients": 433,
+      "Disease": "Chickenpox",
+      "townSize": 6,
+      "latitude": 34.22,
+      "duration": 562
+      },
+      {
+      "date": "2012-01-04",
+      "patients": 345,
+      "Disease": "Cancer - Cervical",
+      "townSize": 7,
+      "latitude": 30.35,
+      "duration": 379
+      },
+      {
+      "date": "2012-01-05",
+      "patients": 480,
+      "Disease": "Celiac Disease",
+      "Disease2": "Celiac Disease",
+      "townSize": 10,
+      "latitude": 25.83,
+      "duration": 501
+      },
+      {
+      "date": "2012-01-06",
+      "patients": 386,
+      "Disease": "Chancroid",
+      "townSize": 7,
+      "latitude": 30.46,
+      "duration": 443
+      },
+      {
+      "date": "2012-01-07",
+      "patients": 348,
+      "Disease": "Arboviral Encephalitis",
+      "townSize": 10,
+      "latitude": 29.94,
+      "duration": 405
+      },
+      {
+      "date": "2012-01-08",
+      "patients": 238,
+      "Disease": "Asthma",
+      "Disease2": "Asthma",
+      "townSize": 16,
+      "latitude": 29.76,
+      "duration": 309
+      },
+      {
+      "date": "2012-01-09",
+      "patients": 218,
+      "Disease": "Cardiovascular Disease",
+      "townSize": 17,
+      "latitude": 32.8,
+      "duration": 287
+      },
+      {
+      "date": "2012-01-10",
+      "patients": 349,
+      "Disease": "Chagas Disease",
+      "townSize": 11,
+      "latitude": 35.49,
+      "duration": 485
+      },
+      {
+      "date": "2012-01-11",
+      "patients": 603,
+      "Disease": "Chlamydia",
+      "townSize": 10,
+      "latitude": 39.1,
+      "duration": 890
+      },
+      {
+      "date": "2012-01-12",
+      "patients": 534,
+      "Disease": "Cyclospora",
+      "Disease2": "Cyclospora",
+      "townSize": 18,
+      "latitude": 39.74,
+      "duration": 810
+      },
+      {
+      "date": "2012-01-13",
+      "Disease": "Salt Lake City",
+      "townSize": 12,
+      "patients": 425,
+      "duration": 670,
+      "latitude": 40.75,
+      "alpha":0.4
+      },
+      {
+      "date": "2012-01-14",
+      "latitude": 36.1,
+      "duration": 470,
+      "Disease": "Bacterial Vaginosis",
+      "Disease2": "Bacterial Vaginosis",
+      "bulletClass": "lastBullet"
+      },
+      {
+      "date": "2012-01-15"
+      },
+      {
+      "date": "2012-01-16"
+      },
+      {
+      "date": "2012-01-17"
+      },
+      {
+      "date": "2012-01-18"
+      },
+      {
+      "date": "2012-01-19"
+      }
+      ];
+      var chart = AmCharts.makeChart("chartdiv", {
+      type: "serial",
+      theme: "dark",
+      dataDateFormat: "YYYY-MM-DD",
+      dataProvider: chartData,
+      
+      addClassNames: true,
+      startDuration: 1,
+      color: "#FFFFFF",
+      marginLeft: 0,
+      
+      categoryField: "date",
+      categoryAxis: {
+      parseDates: true,
+      minPeriod: "DD",
+      autoGridCount: false,
+      gridCount: 50,
+      gridAlpha: 0.1,
+      gridColor: "#FFFFFF",
+      axisColor: "#555555",
+      dateFormats: [{
+      period: 'DD',
+      format: 'DD'
+      }, {
+      period: 'WW',
+      format: 'MMM DD'
+      }, {
+      period: 'MM',
+      format: 'MMM'
+      }, {
+      period: 'YYYY',
+      format: 'YYYY'
+      }]
+      },
+      
+      valueAxes: [{
+      id: "a1",
+      title: "patients",
+      gridAlpha: 0,
+      axisAlpha: 0
+      },{
+      id: "a2",
+      position: "right",
+      gridAlpha: 0,
+      axisAlpha: 0,
+      labelsEnabled: false
+      },{
+      id: "a3",
+      title: "duration",
+      position: "right",
+      gridAlpha: 0,
+      axisAlpha: 0,
+      inside: true,
+      duration: "mm",
+      durationUnits: {
+      DD: "d. ",
+      hh: "h ",
+      mm: "min",
+      ss: ""
+      }
+      }],
+      graphs: [{
+      id: "g1",
+      valueField:  "patients",
+      title:  "patients",
+      type:  "column",
+      fillAlphas:  0.9,
+      valueAxis:  "a1",
+      balloonText:  "[[value]]",
+      legendValueText:  "[[value]]",
+      legendPeriodValueText:  "total: [[value.sum]]",
+      lineColor:  "#263138",
+      alphaField:  "alpha",
+      },{
+      id: "g2",
+      valueField: "latitude",
+      classNameField: "bulletClass",
+      title: "latitude/city",
+      type: "line",
+      valueAxis: "a2",
+      lineColor: "#786c56",
+      lineThickness: 1,
+      legendValueText: "[[description]]/[[value]]",
+      descriptionField: "Disease",
+      bullet: "round",
+      bulletSizeField: "townSize",
+      bulletBorderColor: "#786c56",
+      bulletBorderAlpha: 1,
+      bulletBorderThickness: 2,
+      bulletColor: "#000000",
+      labelText: "[[Disease2]]",
+      labelPosition: "right",
+      balloonText: "latitude:[[value]]",
+      showBalloon: true,
+      animationPlayed: true,
+      },{
+      id: "g3",
+      title: "duration",
+      valueField: "duration",
+      type: "line",
+      valueAxis: "a3",
+      lineColor: "#ff5755",
+      balloonText: "[[value]]",
+      lineThickness: 1,
+      legendValueText: "[[value]]",
+      bullet: "square",
+      bulletBorderColor: "#ff5755",
+      bulletBorderThickness: 1,
+      bulletBorderAlpha: 1,
+      dashLengthField: "dashLength",
+      animationPlayed: true
+      }],
+      
+      chartCursor: {
+      zoomable: false,
+      categoryBalloonDateFormat: "DD",
+      cursorAlpha: 0,
+      valueBalloonsEnabled: false
+      },
+      legend: {
+      bulletType: "round",
+      equalWidths: false,
+      valueWidth: 120,
+      useGraphSettings: true,
+      color: "#FFFFFF"
+      }
+      });

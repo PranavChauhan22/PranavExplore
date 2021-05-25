@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script>
+    const ROOM_ID = "<%= roomId %>"
+  </script>
+  <script defer src="https://unpkg.com/peerjs@1.2.0/dist/peerjs.min.js"></script>
+  <script src="/socket.io/socket.io.js" defer></script>
+  <script src="script.js" defer></script>
+  <title>Document</title>
+  <style>
+    #video-grid {
+display: flex;
+align-items: center;
+justify-content: center;
+    }
+    
+    video {
+      width: 80vw;
+      height: 80vh;
+      object-fit: cover;
+      border: 10px solid black;
+      border-radius: 50px;
+    }
+    .leg{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 10vw;
+      height: 5vh;
+      background-color: black;
+      left: 45vw;
+      position: absolute;
+      border: 3px solid wheat;
+      z-index: 1;
+
+    }
+    .foot{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40vw;
+      height: 10vh;
+      bottom: 0;
+      background-color: black;
+      left: 30vw;
+      position: absolute;
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
+border: 3px solid wheat;
+    }
+  </style>
+</head>
+<body style="background-color:  rgb(247, 147, 17);">
+  <div id="video-grid"></div>
+  <div class="leg"></div>
+  <div class="foot"></div>
+</body>
+</html>
