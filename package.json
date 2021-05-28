@@ -2,9 +2,9 @@
   "name": "conatactme",
   "version": "1.0.0",
   "description": "",
-  "main": "index1.js",
+  "main": "index.js",
   "scripts": {
-    "devStart":"nodemon index.js"
+    "devStart":"nodemon index1.js"
   },
   "author": "",
   "license": "ISC",
