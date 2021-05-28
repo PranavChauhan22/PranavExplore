@@ -2,7 +2,7 @@
   "name": "conatactme",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index1.js",
   "scripts": {
     "devStart":"nodemon index.js"
   },
